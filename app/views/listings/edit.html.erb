@@ -1,0 +1,16 @@
+<h1>Edit Your Listing</h1>
+
+<%= form_tag "/home/#{@listing.id}", :method => :put do %>
+		
+		<%= label_tag "Item:" %>
+		<%= text_field_tag "item", @listing.item %>
+		
+		<%= label_tag "Price:" %>
+		<%= text_field_tag "price", @listing.price %>
+		
+		<%= label_tag "Location:" %>
+		<%= text_field_tag "location", @listing.location %>
+		
+		<%= submit_tag "Update Listing" %>
+		
+		<% end %>
